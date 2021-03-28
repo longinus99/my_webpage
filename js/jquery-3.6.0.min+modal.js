@@ -54,7 +54,7 @@ window.onload = function() {
     if(srcs[i].getAttribute("data_src")){
       srcs[i].setAttribute("src", srcs[i].getAttribute("data_src"))
     }
-  }s
+  }
 }
 
 // // close modal when click modal outside 
