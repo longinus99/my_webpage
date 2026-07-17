@@ -8,12 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css?v=20260718-13">
+  <link rel="stylesheet" href="main.css?v=20260718-14">
   <script>
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.addEventListener('pageshow', () => {
       if (location.hash) history.replaceState(null, '', location.pathname + location.search);
       requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, 0)));
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          const toggle = document.getElementById('menu-toggle');
+          if (toggle) toggle.checked = false;
+        });
+      });
     });
   </script>
 </head>
@@ -32,6 +40,8 @@
       </address>
     </header>
 
+    <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="메뉴 열기">
+    <label class="menu-button" for="menu-toggle">Menu</label>
     <nav aria-label="문서 목차">
       <a href="#profile">Profile</a>
       <a href="#education">Education</a>
