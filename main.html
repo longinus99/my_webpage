@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css?v=20260718-9">
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', () => {
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, 0)));
+    });
+  </script>
 </head>
 <body>
   <main class="cv">
