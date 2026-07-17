@@ -8,6 +8,221 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css?v=20260718-15">
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', () => {
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, 0)));
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          const toggle = document.getElementById('menu-toggle');
+          if (toggle) toggle.checked = false;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <main class="cv">
+    <header class="profile" id="top">
+      <div>
+        <p class="kicker">CURRICULUM VITAE</p>
+        <h1>최건호 <span>Gun Ho Choi</span></h1>
+        <p class="role">AI Researcher · Bioinformatics</p>
+      </div>
+      <address>
+        <a href="mailto:longinus723@gmail.com">longinus723@gmail.com</a>
+        <a href="https://github.com/longinus99" target="_blank" rel="noreferrer">github.com/longinus99</a>
+        <a href="https://blog.naver.com/0723ho" target="_blank" rel="noreferrer">blog.naver.com/0723ho</a>
+      </address>
+    </header>
+
+    <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="메뉴 열기">
+    <label class="menu-button" for="menu-toggle"><span aria-hidden="true">☰</span> Menu</label>
+    <nav aria-label="문서 목차">
+      <a href="#profile">Profile</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <label class="menu-backdrop" for="menu-toggle" aria-label="메뉴 닫기"></label>
+
+    <section id="profile" class="cv-section">
+      <h2>Profile</h2>
+      <div class="section-content summary">
+        <p>인공지능을 전공하며 바이오인포매틱스(Bioinformatics)와의 융합 연구를 수행하고 있습니다. scRNA-seq와 공간 전사체(Spatial Transcriptomics) 등 고차원 생명 데이터 분석을 중심으로 연구해 왔습니다.</p>
+        <p>단일 오믹스뿐 아니라 멀티오믹스 연계를 통한 다각적 분석에 관심이 있습니다. 세포 유형 군집화, 질병 분류, 바이오마커 후보 발굴에서 약물-약물 및 약물-표적 상호작용까지 연구 범위를 확장하고 있습니다.</p>
+      </div>
+    </section>
+
+    <section id="education" class="cv-section">
+      <h2>Education</h2>
+      <div class="section-content entries">
+        <article class="entry">
+          <div class="entry-date">2025.02 — Present</div>
+          <div>
+            <h3>Master's Degree in Artificial Intelligence</h3>
+            <p>Myongji University</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-date">2019.03 — 2025.02</div>
+          <div>
+            <h3>Bachelor's Degree in Data Technology</h3>
+            <p>Myongji University</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="cv-section">
+      <h2>Publications</h2>
+      <div class="section-content entries">
+        <article class="entry publication">
+          <div class="entry-date">2026</div>
+          <div>
+            <h3><a href="https://link.springer.com/article/10.1186/s12864-026-13179-8" target="_blank" rel="noreferrer">scFANCL: Dual contrastive learning with false-negative correction at cell level for single-cell RNA-seq clustering ↗</a></h3>
+            <p class="authors"><strong>Choi G</strong>, Oh M</p>
+            <p><em>BMC Genomics</em> · Published 17 July 2026</p>
+            <a class="doi" href="https://doi.org/10.1186/s12864-026-13179-8" target="_blank" rel="noreferrer">doi:10.1186/s12864-026-13179-8</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="presentations" class="cv-section">
+      <h2>Conference Presentations</h2>
+      <div class="section-content entries">
+        <article class="entry presentation">
+          <div class="entry-date">2025</div>
+          <div>
+            <span class="presentation-type">POSTER ACCEPTED</span>
+            <h3>scFANCL: Dual Contrastive Learning with False-Negative Correction at Cell Level for Single-Cell RNA-seq Clustering</h3>
+            <p><strong>Gunho Choi</strong>, Minsik Oh · Myongji University</p>
+            <p>International Conference on Genome Informatics · ISCB-Asia</p>
+          </div>
+        </article>
+        <article class="entry presentation">
+          <div class="entry-date">2025</div>
+          <div>
+            <span class="presentation-type">POSTER PRESENTATION</span>
+            <h3>scFNCCL: Dual Contrastive Learning with False-Negative Correction at Cell Level for Single-Cell RNA-seq Clustering</h3>
+            <p><strong>Gunho Choi</strong>, Minsik Oh · Myongji University</p>
+            <p>BIOINFO 2025 · Korean Society for Bioinformatics (KSBI)</p>
+          </div>
+        </article>
+        <article class="entry presentation">
+          <div class="entry-date">2026</div>
+          <div>
+            <span class="presentation-type oral">ORAL PRESENTATION</span>
+            <h3>HetDrugKG: Heterogeneous Knowledge Graph-Guided Drug Perturbation Prediction in Single-Cell Transcriptomics</h3>
+            <p>Seunghoo Song, <strong>Gunho Choi</strong>, Minsik Oh · Myongji University</p>
+            <p>KIISE Korea Computer Congress (KCC)</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="cv-section">
+      <h2>Research Experience</h2>
+      <div class="section-content entries">
+        <article class="entry experience">
+          <div class="entry-date">Myongji University</div>
+          <div>
+            <h3>Artificial Intelligence and Data Analytics Lab</h3>
+            <div class="experience-project">
+              <h4>ARPA-H CRC · AI 기반 타깃 후보 발굴</h4>
+              <ul>
+                <li>Xenium spatial data 전처리 및 demultiplexing</li>
+                <li>Cell clustering 및 LLM 기반 cell-type annotation</li>
+                <li>환자 phenotype에 따른 macrophage MSS/MSI 특이적 marker gene 후보 도출</li>
+              </ul>
+            </div>
+            <div class="experience-project">
+              <h4>GRA16 과발현에 따른 췌장암 항암 효과 분석</h4>
+              <ul>
+                <li>Pancreatic bulk RNA-seq 데이터 분석</li>
+                <li>nf-core/Nextflow 기반 데이터 전처리 및 DEG 분석</li>
+                <li>GRA16의 NO 기전 관련 KEGG pathway 및 연관 유전자 분석</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="cv-section">
+      <h2>Research Projects</h2>
+      <div class="section-content entries">
+        <article class="entry">
+          <div class="entry-date">2025 — 2029</div>
+          <div>
+            <h3>난치성 고형암 MLT 신규 치료제 신속 개발</h3>
+            <p>공간 전사체 기반 타겟 발굴과 in silico 및 오가노이드 활용 타겟 검증</p>
+            <div class="keywords"><span>Spatial Transcriptomics</span><span>In silico</span><span>Organoid</span></div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-date">2025 — 2028</div>
+          <div>
+            <h3>만성 염증성 질환 조절 CAR-Treg 세포 치료제 개발</h3>
+            <p>AI 기반 타겟 발굴 플랫폼 확립을 통한 치료제 개발 연구</p>
+            <div class="keywords"><span>Target Discovery</span><span>CAR-Treg</span><span>Artificial Intelligence</span></div>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-date">2025 — 2026</div>
+          <div>
+            <h3>CRISPR-Cas9 대규모 DNA 결실 분석 플랫폼</h3>
+            <p>결실 검출·정량화를 위한 클라이언트 사이드 고속·고정밀 웹 기반 분석 플랫폼 개발</p>
+            <div class="keywords"><span>CRISPR-Cas9</span><span>DNA Deletion</span><span>Web Platform</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="cv-section">
+      <h2>Research Interests</h2>
+      <div class="section-content skill-grid">
+        <div><h3>Omics Analysis</h3><p>scRNA-seq · Spatial Transcriptomics · Multi-omics Integration</p></div>
+        <div><h3>Machine Learning</h3><p>Cell-type Clustering · Disease Classification · Biomarker Discovery</p></div>
+        <div><h3>Drug Discovery</h3><p>Drug–Drug Interaction · Drug–Target Interaction · Target Discovery</p></div>
+      </div>
+    </section>
+
+    <section class="cv-section compact">
+      <h2>Languages</h2>
+      <div class="section-content"><p>한국어 · English · 日本語</p></div>
+    </section>
+
+    <section class="cv-section compact">
+      <h2>Interests</h2>
+      <div class="section-content"><p>드럼 · 기타 · 록 페스티벌 · 해외여행</p></div>
+    </section>
+
+    <footer>
+      <span>Last updated · July 2026</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="최건호 — AI & Bioinformatics Curriculum Vitae">
+  <title>최건호 — Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css?v=20260718-14">
   <script>
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
